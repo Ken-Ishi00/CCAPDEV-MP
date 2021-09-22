@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-nventory | View Item</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="body.css"> -->
+</head>
+<body>
+    <div id="header">
+        <div id="logo_cont">
+            <a  id="logo" href="/allItems"> <img src="/images/logo.png"></a>
+        </div>
+        <div id="menu">
+            <a  class="menuitem" href="/allItems">All Items</a>
+            <a  id="current" class="menuitem" href="/viewItem">View Item</a>
+            <a  class="menuitem" href="/soldItems">Sold Items</a>
+            <a  class="menuitem" href="/myAccount">My Account</a>
+            <a  class="menuitem" id="logout" href="/index">Logout</a>
+        </div>
+    </div>
+    <div id="body">
+        <div id="left">
+            {{> detail name=name size=size date=date buy=buy price=price}}
+            <form id="editItem">
+                <h3>Edit Item</h3>          
+                <br><label>Item Name:</label>
+                <input type="text" id= "i_name" name="i_name" placeholder="ex: Nissin Wafer Choco"> 
+                
+                <br><label>Expiry Date:</label>
+                <input type="date" name="i_edate" id="i_edate"> 
+
+                <br><label>Size:</label>
+                <input type="text" id= "i_size" name="i_size" placeholder="ex: 50 ml"> 
+                
+                <br><label>Buy Price:</label>
+                <input type="number" id="i_bprice" name="i_bprice"  placeholder="ex: 50.00"> 
+                
+                <br><label>Selling Price:</label>
+                <input type="number" id="i_sprice" name="i_sprice"  placeholder="ex: 50.00"> 
+                
+                <br><input type="button" name="submit" id="submit" value="Save Changes">
+            </form>
+            <div id="itemOptions">
+                <a href="">Mark as Sold</a>
+                <a href="">Delete Item</a>
+            </div>
+        </div> 
+        <div id="mid">
+            <form id="searchForm">
+                <input type="text" id= "search" name="search" placeholder="Search for an item name here"> 
+                <input type="button" name="searchSubmit" id="searchSubmit" value="Search">
+            </form>
+            <div id="list">
+                {{#each items}}
+                    {{> item name=name date=date buy=buy price=price}}
+                {{/each}}
+            </div>
+        </div> 
+        <!-- <div id="right"></div>  -->
+    </div>
+</body>
+</html>
