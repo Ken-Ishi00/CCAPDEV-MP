@@ -1,0 +1,4 @@
+function aler(){
+
+	alert("HAHAHAHA")
+}

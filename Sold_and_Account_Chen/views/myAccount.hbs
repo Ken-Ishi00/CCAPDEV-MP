@@ -1,0 +1,43 @@
+<script src="js/Account.js"></script>
+
+<div class="body" > 
+		<div class="mid" id="midAccount">
+			<div id="top"><h1>Account Details</h1></div>
+			<div class="btm" id="detailSection">
+				<label>E-mail</label>
+				<div id="acntDetails">JohnDoe@gmail.com</div>
+				<label>Username</label>
+				<div id="acntDetails">JohnDoe</div>
+				<button class="btnAccount" id="btnEditAccount" onclick="editAccount()">Edit Account</button>
+			</div>
+			
+			<form class="btm" id="editAccount" style="display: none">
+				<label>E-mail</label>
+				<input class="inputEdit" type="email" placeholder="Johndoe@gmail.com">
+				<label>Username</label>
+				<input class="inputEdit" type="text" placeholder="JohnDoe">
+				<label>New Password</label>
+				<input class="inputEdit" type="password" placeholder="abc123">
+				<label>Re-enter New Password</label>
+				<input class="inputEdit" type="password" placeholder="abc123">
+				
+				<button class="btnAccount" id="btnSaveAccount" style="display: none" onclick="saveAccount()">Save Changes</button>
+            
+			</form>
+			
+			<div class="btm" id="deleteSection">
+				<!-- <div id="line"></div> -->
+				<h2 id="deleteTitle">Delete Account</h2>
+				<h5 class="deleteDesc">To continue deleting your account, please enter your password</h5>
+				<form id="deleteAccount">
+					
+					<label id="label2" >Insert Password</label>
+					<input id="input2" type="password">
+					
+				</form>
+				<div class="deleteDesc" id="msgSubmit"></div>
+				<button class="btnAccount" id="btnDeleteAccount" onclick="deleteAccount()">Delete Account</button>
+            
+			</div>
+		</div>
+    </div>
