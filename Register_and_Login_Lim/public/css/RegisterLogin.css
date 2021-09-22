@@ -1,0 +1,74 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+
+}
+
+#body {
+    height: 635px;
+    width: fit-content();
+    background: url('/images/bg.jpg') no-repeat fixed;
+    background-size: cover;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+#title {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 900;
+    margin: 40px 160px 40px 0px;
+    font-size: 25px;
+}
+
+#Description{
+    font-size: 18px;
+    margin-left: 5px;
+    background-color: rgba(95, 158, 160, 0.637);
+    width:700px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding:3px;
+}
+
+.SetInput {
+    margin-left: 13px;
+    margin-bottom: 13px;
+}
+
+#link{
+    color: aqua;
+}
